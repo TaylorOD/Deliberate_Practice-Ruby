@@ -18,13 +18,35 @@ p new_array
 #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
 #     Use a while loop.
 
+strings_array = ["winner", "winner", "chicken", "dinner"]
+new_array = []
 
+i = 0
+while i < strings_array.length
+  if strings_array[i][0] == "w"
+    new_array << strings_array[i]
+  end
+  i += 1
+end
+
+p new_array
 
 #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 #     Use a while loop.
 
+array_of_hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+price_array = []
 
+i = 0
+while i < array_of_hashes.length
+  if array_of_hashes[i][:price] > 5
+    price_array << array_of_hashes[i]
+  end
+  i += 1
+end
+
+p price_array
 
 #  4. Start with an array of numbers and create a new array with only the even numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
