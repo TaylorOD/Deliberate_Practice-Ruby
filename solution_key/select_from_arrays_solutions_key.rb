@@ -120,14 +120,19 @@ p no_b_strings
 
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
-#     Use the .map method.
+#     Use the .select method.
 
+hashs_array = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
 
+new_hashes = hashs_array.select do |less_than_ten|
+  less_than_ten[:price] < 10
+end
 
+p new_hashes
 
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
-#     Use the .map method.
+#     Use the .select method.
 
 
 
