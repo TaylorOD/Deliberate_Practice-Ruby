@@ -82,7 +82,16 @@ p short_strings_array
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 #     Use the .each method.
 
+array_of_hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+short_names_array = []
 
+array_of_hashes.each do |shorter|
+  if shorter[:name].length < 6
+    short_names_array << shorter
+  end
+end
+
+p short_names_array
 
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
