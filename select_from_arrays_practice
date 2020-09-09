@@ -24,18 +24,18 @@
 
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
-#     Use the .map method.
+#     Use the .select method.
 
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
-#     Use the .map method.
+#     Use the .select method.
 
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
-#     Use the .map method.
+#     Use the .select method.
 
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
-#     Use the .map method.
+#     Use the .select method.
 
 SOLUTIONS KEY: https://github.com/TaylorOD/Deliberate_Practice-Ruby/blob/master/solution_key/select_from_arrays_solutions_key.rb
