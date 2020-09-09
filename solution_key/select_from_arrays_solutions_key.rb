@@ -95,15 +95,27 @@ p short_names_array
 
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
-#     Use the .map method.
+#     Use the .select method.
 
+array = [8, 23, 0, 44, 1980, 3]
 
+small_numbers = array.select do |less_than_ten|
+  less_than_ten < 10
+end
+
+p small_numbers
 
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
-#     Use the .map method.
+#     Use the .select method.
 
+strings_array = ["big", "little", "good", "bad"]
 
+no_b_strings = strings_array.select do |strings|
+  strings[0] != "b"
+end
+
+p no_b_strings
 
 
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
