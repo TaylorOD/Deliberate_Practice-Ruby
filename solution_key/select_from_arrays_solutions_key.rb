@@ -134,5 +134,11 @@ p new_hashes
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
 #     Use the .select method.
 
+numbers_array = [2, 4, 5, 1, 8, 9, 7]
 
+odd_numbers = numbers_array.select do |odd|
+  odd % 2 == 1
+end
+
+p odd_numbers
 
