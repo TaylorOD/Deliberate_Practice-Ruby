@@ -52,7 +52,16 @@ p price_array
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
 #     Use the .each method.
 
+array_of_numbers = [2, 4, 5, 1, 8, 9, 7]
+even_numbers = []
 
+array_of_numbers.each do |even|
+  if even % 2 == 0
+    even_numbers << even
+  end
+end
+
+p even_numbers
 
 #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
