@@ -67,7 +67,16 @@ p even_numbers
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 #     Use the .each method.
 
+strings_array = ["a", "man", "a", "plan", "a", "canal", "panama"]
+short_strings_array = []
 
+strings_array.each do |less_than_four|
+  if less_than_four.length < 4
+    short_strings_array << less_than_four
+  end
+end
+
+p short_strings_array
 
 #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
