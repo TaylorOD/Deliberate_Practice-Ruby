@@ -83,3 +83,10 @@ p low_price_array
 
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
+array = [2, 4, 5, 1, 8, 9, 7]
+odd_array = array.select do |select|
+  select % 2 == 1
+end
+p odd_array
+
