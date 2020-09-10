@@ -29,6 +29,12 @@ p prices_hashs
 #  4. Start with an array of numbers and create a new array with only the even numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
 
+numbers_array = [2, 4, 5, 1, 8, 9, 7]
+even_numbers = numbers_array.select do |select|
+  select % 2 == 0
+end
+p even_numbers
+
 #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
