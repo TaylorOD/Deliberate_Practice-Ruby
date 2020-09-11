@@ -70,8 +70,28 @@ p sum
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 #     Use .reduce method.
 
+array_of_hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+
+reduce = array_of_hashes.reduce(array_of_hashes[0]) do |array_of_hashes, reduce|
+  if reduce[:price] < array_of_hashes[:price]
+    reduce
+  else
+    array_of_hashes
+  end
+end
+
+p reduce
+
 #  7. Start with an array of numbers and compute product of all the numbers.
 #     For example, [5, 10, 8, 3] becomes 1200. Use .reduce method.
+
+numbers = [5, 10, 8, 3]
+
+product = numbers.reduce(1) do |product, number|
+  product * number
+end
+
+p product
 
 #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
