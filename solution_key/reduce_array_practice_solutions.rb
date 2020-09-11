@@ -1,8 +1,29 @@
 #  1. Start with an array of numbers and compute the sum of all the numbers.
 #     For example, [5, 10, 8, 3] becomes 26. Use while loop.
 
+array = [5, 10, 8, 3]
+
+i = 0
+sum = 0
+while i < array.length
+  sum = sum + array[i]
+  i += 1
+end
+
+p sum
+
 #  2. Start with an array of strings and combine them all into a single string.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton". Use while loop.
+
+strings = ["volleyball", "basketball", "badminton"]
+string = ""
+i = 0
+while i < strings.length
+  string << strings[i]
+  i += 1
+end
+
+p string
 
 #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105. Use .each method.
