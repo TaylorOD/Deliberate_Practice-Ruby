@@ -28,4 +28,4 @@
 # 10. Start with an array of numbers and compute the maximum number.
 #     For example, [5, 10, 8, 3] becomes 10.
 
-SOLUTIONS KEY:
+SOLUTIONS KEY: https://github.com/TaylorOD/Deliberate_Practice-Ruby/blob/master/solution_key/reduce_array_practice_solutions.rb
