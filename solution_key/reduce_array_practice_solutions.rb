@@ -28,6 +28,18 @@ p string
 #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105. Use .each method.
 
+hashes_array = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+
+sum = 0
+i = 0
+
+while i < hashes_array.length
+  sum = sum + hashes_array[i][:price]
+  i += 1
+end
+
+p sum
+
 #  4. Start with an array of numbers and compute the the minumum number.
 #     For example, [5, 10, 8, 3, 9] becomes 3. Use . each method.
 
