@@ -43,6 +43,17 @@ p sum
 #  4. Start with an array of numbers and compute the the minumum number.
 #     For example, [5, 10, 8, 3, 9] becomes 3. Use . each method.
 
+array = [5, 10, 8, 3, 9]
+min = array[0]
+
+array.each do |each|
+  if each < min
+    min = each
+  end
+end
+
+p min
+
 #  5. Start with an array of strings and compute the total length of all the strings.
 #     For example, ["volleyball", "basketball", "badminton"] becomes 29. Use .each method.
 
