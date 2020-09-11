@@ -97,11 +97,43 @@ p product
 #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 #     Use .reduce method.
 
+strings = ["volleyball", "basketball", "badminton"]
+
+single = strings.reduce("-") do |total, string|
+  total + "#{string}-"
+end
+
+p single
+
 #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
-#     Use .reduce method.
+#     Use .each method.
 
+hashs = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+short_name = hashs[0]
+
+hashs.each do |product|
+  if product[:name].length < short_name[:name].length
+    short_name = product
+  end
+end
+
+p short_name
 
 
 # 10. Start with an array of numbers and compute the maximum number.
-#     For example, [5, 10, 8, 3] becomes 10. Use .reduce method.
+#     For example, [5, 10, 8, 3] becomes 10. Use while loop.
+
+numbers = [5, 10, 8, 3]
+
+max = numbers[0]
+i = 0
+
+while i < numbers.length
+  if numbers[i] > max
+    max = numbers[i]
+  end
+  i += 1
+end
+
+p max
