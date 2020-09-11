@@ -57,6 +57,15 @@ p min
 #  5. Start with an array of strings and compute the total length of all the strings.
 #     For example, ["volleyball", "basketball", "badminton"] becomes 29. Use .each method.
 
+strings = ["volleyball", "basketball", "badminton"]
+sum = 0
+
+strings.each do |each|
+  sum = sum + each.length
+end
+
+p sum
+
 #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 #     Use .reduce method.
