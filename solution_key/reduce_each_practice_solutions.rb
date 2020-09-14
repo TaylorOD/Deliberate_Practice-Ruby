@@ -48,6 +48,25 @@ p single_string
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 #     Use .each and .reduce
 
+hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+sum = 0
+
+hashes.each do |price|
+  sum = price[:price] + sum
+end
+
+p sum
+
+-
+
+hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+
+sum = hashes.reduce(0) do |sum, price|
+  sum + price[:price]
+end
+
+p sum
+
 #  4. Start with an array of numbers and compute the the minumum number.
 #     For example, [5, 10, 8, 3, 9] becomes 3.
 #     Use .each and .reduce
