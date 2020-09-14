@@ -71,6 +71,31 @@ p sum
 #     For example, [5, 10, 8, 3, 9] becomes 3.
 #     Use .each and .reduce
 
+numbers = [5, 10, 8, 3, 9]
+min_number = numbers[0]
+
+numbers.each do |number|
+  if number < min_number
+    min_number = number
+  end
+end
+
+p min_number
+
+-
+
+numbers = [5, 10, 8, 3, 9]
+
+min_number = numbers.reduce(numbers[0]) do |min_number, number|
+  if number < min_number
+    number
+  else
+    min_number
+  end
+end
+
+p min_number
+
 #  5. Start with an array of strings and compute the total length of all the strings.
 #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 #     Use .each and .reduce
