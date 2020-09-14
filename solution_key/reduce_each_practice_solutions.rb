@@ -11,7 +11,7 @@ end
 
 p sum_numbers
 
--
+# -
 
 numbers = [5, 10, 8, 3]
 sum_numbers = numbers.reduce() do |sum_numbers, number|
@@ -23,6 +23,26 @@ p sum_numbers
 #  2. Start with an array of strings and combine them all into a single string.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
 #     Use .each and .reduce
+
+
+strings = ["volleyball", "basketball", "badminton"]
+single_string = ""
+
+strings.each do |string|
+  single_string << string
+end
+
+p single_string
+
+-
+
+strings = ["volleyball", "basketball", "badminton"]
+
+single_string = strings.reduce() do |single_string, string|
+  single_string << string
+end
+
+p single_string
 
 #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
