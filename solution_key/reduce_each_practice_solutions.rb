@@ -99,3 +99,25 @@ p min_number
 #  5. Start with an array of strings and compute the total length of all the strings.
 #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 #     Use .each and .reduce
+
+
+strings = ["volleyball", "basketball", "badminton"]
+string_length = 0
+
+strings.each do |string|
+  string_length = string.length + string_length
+end
+
+p string_length
+
+-
+
+strings = ["volleyball", "basketball", "badminton"]
+
+string_length = strings.reduce(0) do |string_length, string|
+  string_length + string.length
+end
+
+p string_length
+
+
