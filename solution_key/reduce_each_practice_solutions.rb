@@ -137,7 +137,17 @@ p lowest_hash
 
 
 #.reduce
+array_of_hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
 
+lowest_hash = array_of_hashes.reduce(array_of_hashes[0]) do |lowest_hash, hash|
+  if hash[:price] < lowest_hash[:price]
+    hash
+  else
+    lowest_hash
+  end
+end
+
+p lowest_hash
 
 
 #  7. Start with an array of numbers and compute product of all the numbers.
@@ -146,7 +156,15 @@ p lowest_hash
 
 #.each
 
+numbers = [5, 10, 8, 3]
 
+product_of_numbers = 1
+
+numbers.each do |number|
+  product_of_numbers = product_of_numbers * number
+end
+
+p product_of_numbers
 
 #.reduce
 
