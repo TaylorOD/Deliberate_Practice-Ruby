@@ -168,6 +168,13 @@ p product_of_numbers
 
 #.reduce
 
+numbers = [5, 10, 8, 3]
+
+product = numbers.reduce(1) do |product, number|
+  product * number
+end
+
+p product
 
 
 #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
