@@ -183,11 +183,22 @@ p product
 
 #.each
 
+strings = ["volleyball", "basketball", "badminton"]
+strings_together = "-"
+strings.each do |string|
+  strings_together << string + "-"
+end
 
+p strings_together
 
 #.reduce
 
+strings = ["volleyball", "basketball", "badminton"]
+strings_together = strings.reduce("-") do |strings_together, string|
+  strings_together << string + "-"
+end
 
+p strings_together
 
 
 #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
