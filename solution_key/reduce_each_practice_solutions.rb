@@ -2,6 +2,7 @@
 #     For example, [5, 10, 8, 3] becomes 26.
 #     Use .each and .reduce
 
+#.each
 numbers = [5, 10, 8, 3]
 sum_numbers = 0
 
@@ -11,8 +12,7 @@ end
 
 p sum_numbers
 
-# -
-
+#.reduce
 numbers = [5, 10, 8, 3]
 sum_numbers = numbers.reduce() do |sum_numbers, number|
   sum_numbers + number
@@ -24,7 +24,7 @@ p sum_numbers
 #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
 #     Use .each and .reduce
 
-
+#.each
 strings = ["volleyball", "basketball", "badminton"]
 single_string = ""
 
@@ -34,8 +34,7 @@ end
 
 p single_string
 
--
-
+#.reduce
 strings = ["volleyball", "basketball", "badminton"]
 
 single_string = strings.reduce() do |single_string, string|
@@ -48,6 +47,7 @@ p single_string
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 #     Use .each and .reduce
 
+#.each
 hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
 sum = 0
 
@@ -57,8 +57,7 @@ end
 
 p sum
 
--
-
+#.reduce
 hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
 
 sum = hashes.reduce(0) do |sum, price|
@@ -71,6 +70,7 @@ p sum
 #     For example, [5, 10, 8, 3, 9] becomes 3.
 #     Use .each and .reduce
 
+#.each
 numbers = [5, 10, 8, 3, 9]
 min_number = numbers[0]
 
@@ -82,8 +82,7 @@ end
 
 p min_number
 
--
-
+#.reduce
 numbers = [5, 10, 8, 3, 9]
 
 min_number = numbers.reduce(numbers[0]) do |min_number, number|
@@ -100,7 +99,7 @@ p min_number
 #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 #     Use .each and .reduce
 
-
+#.each
 strings = ["volleyball", "basketball", "badminton"]
 string_length = 0
 
@@ -110,8 +109,7 @@ end
 
 p string_length
 
--
-
+#.reduce
 strings = ["volleyball", "basketball", "badminton"]
 
 string_length = strings.reduce(0) do |string_length, string|
@@ -119,5 +117,66 @@ string_length = strings.reduce(0) do |string_length, string|
 end
 
 p string_length
+
+#  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
+#     Use a .each then a .reduce
+
+#.each
+
+
+
+#.reduce
+
+
+
+#  7. Start with an array of numbers and compute product of all the numbers.
+#     For example, [5, 10, 8, 3] becomes 1200.
+#     Use a .each then a .reduce
+
+#.each
+
+
+
+#.reduce
+
+
+
+#  8. Start with an array of strings and combine them all into a single string, separated by dashes.
+#     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
+#     Use a .each then a .reduce
+
+#.each
+
+
+
+#.reduce
+
+
+
+
+#  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+#     Use a .each then a .reduce
+
+#.each
+
+
+
+#.reduce
+
+
+
+
+# 10. Start with an array of numbers and compute the maximum number.
+#     For example, [5, 10, 8, 3] becomes 10.
+#     Use a .each then a .reduce
+
+#.each
+
+
+
+#.reduce
+
 
 
