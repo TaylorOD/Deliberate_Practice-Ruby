@@ -124,6 +124,16 @@ p string_length
 
 #.each
 
+array_of_hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+lowest_hash = array_of_hashes[0]
+
+array_of_hashes.each do |hash|
+  if hash[:price] < lowest_hash[:price]
+    lowest_hash = hash
+  end
+end
+
+p lowest_hash
 
 
 #.reduce
