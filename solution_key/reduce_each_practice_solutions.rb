@@ -207,12 +207,30 @@ p strings_together
 
 #.each
 
+array_of_hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+short_name = array_of_hashes[0]
+array_of_hashes.each do |name|
+  if name[:name].length < short_name[:name].length
+    short_name = name
+  end
+end
+
+p short_name
 
 
 #.reduce
 
+array_of_hashes = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
 
+short_name = array_of_hashes.reduce(array_of_hashes[0]) do |short_name, name|
+  if name[:name].length < short_name[:name].length
+    name
+  else
+    short_name
+  end
+end
 
+p short_name
 
 # 10. Start with an array of numbers and compute the maximum number.
 #     For example, [5, 10, 8, 3] becomes 10.
@@ -220,9 +238,27 @@ p strings_together
 
 #.each
 
+numbers = [5, 10, 8, 3]
+max_number = numbers[0]
 
+numbers.each do |num|
+  if num > max_number
+    max_number = num
+  end
+end
+
+p max_number
 
 #.reduce
 
+numbers = [5, 10, 8, 3]
+max_number = numbers.reduce(numbers[0]) do |max, num|
+  if num > max
+    num
+  else
+    max
+  end
+end
 
+p max_number
 
