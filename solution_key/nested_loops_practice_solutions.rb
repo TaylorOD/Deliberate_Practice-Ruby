@@ -1,6 +1,22 @@
 #  1. Use a nested loop to convert an array of number pairs into a single flattened array.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes [1, 3, 8, 9, 2, 16].
 
+array_of_arrays = [[1, 3], [8, 9], [2, 16]]
+flat_array = []
+index1 = 0
+
+while index1 < array_of_arrays.length
+  array_of_arrays_down_one = array_of_arrays[index1]
+  index2 = 0
+  while index2 < array_of_arrays_down_one.length
+    flat_array << array_of_arrays_down_one[index2]
+    index2 += 1
+  end
+  index1 += 1
+end
+
+p flat_array
+
 #  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
 #     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
 
