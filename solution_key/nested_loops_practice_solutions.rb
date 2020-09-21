@@ -84,6 +84,23 @@ p largest_product
 #  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
 
+array_of_numbers = [[1, 3], [8, 9], [2, 16]]
+sum_of_numbers = 0
+index1 = 0
+
+while index1 < array_of_numbers.length
+  array_of_numbers_down_one = array_of_numbers[index1]
+  index2 = 0
+  while index2 < array_of_numbers_down_one.length
+    array_of_numbers_down_two = array_of_numbers_down_one[index2]
+    sum_of_numbers = sum_of_numbers + array_of_numbers_down_two
+    index2 += 1
+  end
+  index1 += 1
+end
+
+p sum_of_numbers
+
 #  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
 #     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
 
