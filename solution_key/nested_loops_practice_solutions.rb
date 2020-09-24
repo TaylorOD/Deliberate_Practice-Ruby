@@ -141,6 +141,27 @@ p combination_array
 #  8. Use a nested loop to find the largest sum of any two different numbers within an array.
 #     For example, [1, 8, 3, 10] becomes 18.
 
+array_of_numbers = [1, 8, 3, 10]
+largest_sum = array_of_numbers[0] + array_of_numbers[1]
+index1 = 0
+
+while index1 < array_of_numbers.length
+  first_number = array_of_numbers[index1]
+  index2 = 0
+  while index2 < array_of_numbers.length
+    second_number = array_of_numbers[index2]
+    if index1 != index2
+      if first_number + second_number > largest_sum
+        largest_sum = first_number + second_number
+      end
+    end
+    index2 += 1
+  end
+  index1 += 1
+end
+
+p largest_sum
+
 #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
