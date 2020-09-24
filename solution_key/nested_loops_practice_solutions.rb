@@ -188,3 +188,19 @@ p first_pair_to_ten
 
 # 10. Use a nested loop to convert an array of string arrays into a single string.
 #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+
+array_of_strings = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]
+single_string = ""
+index1 = 0
+
+while index1 < array_of_strings.length
+  index2 = 0
+  while index2 < array_of_strings[index1].length
+    single_string = single_string + array_of_strings[index1][index2]
+
+    index2 += 1
+  end
+  index1 += 1
+end
+
+p single_string
