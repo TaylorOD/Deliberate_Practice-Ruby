@@ -90,4 +90,13 @@ even_numbers = numbers.select do |number|
 end
 p even_numbers
 
+#  9. Start with an array of numbers and compute product of all the numbers.
+#     For example, [5, 10, 8, 3] becomes 1200.
+
+numbers = [5, 10, 8, 3]
+product = numbers.reduce(1) do |product, number|
+  number * product
+end
+p product
+
 
