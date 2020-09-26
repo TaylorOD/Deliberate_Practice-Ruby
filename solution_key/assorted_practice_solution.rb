@@ -99,4 +99,17 @@ product = numbers.reduce(1) do |product, number|
 end
 p product
 
+#  10. Start with an array of hashes and find the hash with the lowest price (from the :price key).
+#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
+array_of_items = [{ name: "chair", price: 100 }, { name: "pencil", price: 1 }, { name: "book", price: 4 }]
+
+lowest_price = array_of_items.reduce(array_of_items[0]) do |lowest, item|
+  if item[:price] < lowest[:price]
+    item
+  else
+    lowest
+  end
+end
+
+p lowest_price
