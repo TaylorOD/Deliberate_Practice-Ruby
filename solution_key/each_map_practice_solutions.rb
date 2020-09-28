@@ -180,3 +180,20 @@ p ages_times_two
 
 # 10. Start with an array of numbers and create a new array with each number converted into a string.
 #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+# .each
+
+numbers = [1, 2, 3]
+strings = []
+numbers.each do |number|
+  strings << number.to_s
+end
+p strings
+
+# .map
+
+numbers = [1, 2, 3]
+strings = numbers.map do |number|
+  number.to_s
+end
+p strings
