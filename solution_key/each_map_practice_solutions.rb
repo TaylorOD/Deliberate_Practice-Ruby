@@ -41,6 +41,23 @@ p upcase_strings
 #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
+# .each
+
+peoples_info = [{ name: "Alice", age: 27 }, { name: "Blane", age: 16 }]
+names = []
+peoples_info.each do |people|
+  names << people[:name]
+end
+p names
+
+# .map
+
+peoples_info = [{ name: "Alice", age: 27 }, { name: "Blane", age: 16 }]
+names = peoples_info.map do |people|
+  people[:name]
+end
+p names
+
 #  4. Start with an array of numbers and create a new array with each number plus 7.
 #     For example, [1, 2, 3] becomes [8, 9, 10].
 
