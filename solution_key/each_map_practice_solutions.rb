@@ -21,6 +21,23 @@ p numbers_times_three
 #  2. Start with an array of strings and create a new array with each string upcased.
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
+# .each
+
+strings = ["hello", "goodbye"]
+upcase_strings = []
+strings.each do |string|
+  upcase_strings << string.upcase
+end
+p upcase_strings
+
+# .map
+
+strings = ["hello", "goodbye"]
+upcase_strings = strings.map do |string|
+  string.upcase
+end
+p upcase_strings
+
 #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
 
