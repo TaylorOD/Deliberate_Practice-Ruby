@@ -121,6 +121,23 @@ p ages
 #  7. Start with an array of numbers and create a new array with each number divided by 2.
 #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
+# .each
+
+numbers = [1, 2, 3]
+divided_numbers = []
+numbers.each do |number|
+  divided_numbers << number.to_f / 2
+end
+p divided_numbers
+
+# .map
+
+numbers = [1, 2, 3]
+divided_numbers = numbers.map do |number|
+  number.to_f / 2
+end
+p divided_numbers
+
 #  8. Start with an array of strings and create a new array with each string's first letter only.
 #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
