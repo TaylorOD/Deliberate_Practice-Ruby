@@ -81,6 +81,23 @@ p numbers_plus_seven
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
 
+# .each
+
+strings = ["hello", "goodbye"]
+strings_length = []
+strings.each do |string|
+  strings_length << string.length
+end
+p strings_length
+
+# .map
+
+strings = ["hello", "goodbye"]
+strings_length = strings.map do |string|
+  string.length
+end
+p strings_length
+
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
