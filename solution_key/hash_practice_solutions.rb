@@ -77,6 +77,28 @@ p laptop[:year]
 
 # 8. Make an array of hashes to store the brand and model for 3 different laptops. Then print out the second laptop's model.
 
+laptops_info = [{
+  brand: "Samsung",
+  model: "Galaxy Book",
+  year: 2018,
+}, {
+  brand: "Microsoft",
+  model: "Surfance Pro 3",
+  year: 2020,
+}, {
+  brand: "Razer",
+  model: "Blade Stealth 14'",
+  year: 2019,
+}]
+p laptops_info[1][:model]
+
 # 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
+
+definitions = {
+  articulate: "expressing oneself readily, clearly, and effectively",
+  formulate: "to reduce to or express in a formula",
+}
+definitions[:express] = "to represent in words"
+p definitions
 
 # 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
