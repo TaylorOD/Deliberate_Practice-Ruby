@@ -102,3 +102,12 @@ definitions[:express] = "to represent in words"
 p definitions
 
 # 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
+
+shirt_info = {
+  brand: "Hanes",
+  color: "Blue",
+  size: "L",
+}
+p shirt_info[:brand]
+p shirt_info[:color]
+p shirt_info[:size]
