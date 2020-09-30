@@ -1,5 +1,14 @@
 # 1. Make a hash to store a person's first name, last name, and email address. Then print each attribute on separate lines.
 
+person_info = {
+  first_name: "Taylor",
+  last_name: "Dorsett",
+  email: "taylordorsett@gmail.com",
+}
+puts person_info[:first_name]
+puts person_info[:last_name]
+puts person_info[:email]
+
 # 2. Make an array of hashes to store the first name and last name for 3 different people. Then print out the first person's info.
 
 # 3. Make a hash to store prices for 3 different menu items. Then add a new menu item and price and print the hash to see the result.
