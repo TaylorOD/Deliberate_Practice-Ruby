@@ -39,7 +39,22 @@ p book_info[:language]
 
 # 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
 
-# 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
+books_info = [{
+  title: "Van Life",
+  author: "Bob Newman",
+},
+              {
+  title: "80 Carrots",
+  author: "Big Easy",
+},
+              {
+  title: "Dead Heads",
+  author: "John Guitar",
+}]
+
+puts books_info[2]
+
+# 6. Make a hash to store 3 different states and their capitals. Then add a new state and capital and print the hash to see the result.
 
 # 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
 
