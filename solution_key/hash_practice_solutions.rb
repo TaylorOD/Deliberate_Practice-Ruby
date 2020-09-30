@@ -26,6 +26,17 @@ p menu
 
 # 4. Make a hash to store a book's title, author, number of pages, and language. Then print each attribute on separate lines.
 
+book_info = {
+  title: "Head Off",
+  author: "John Scalzie",
+  number_of_pages: 156,
+  language: "English",
+}
+p book_info[:title]
+p book_info[:author]
+p book_info[:number_of_pages]
+p book_info[:language]
+
 # 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
 
 # 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
