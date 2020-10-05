@@ -33,6 +33,21 @@ p id_paint_info
 #  3. Convert a string into a hash with keys for each letter in the string and values for the number of times the letter appears in the string.
 #     For example, "bookkeeper" becomes {"b" => 1, "o" => 2, "k" => 2, "e" => 3, "p" => 1, "r" => 1}.
 
+word = "bookkeeper"
+letter_count = {}
+index1 = 0
+
+while index1 < word.length
+  key = word[index1]
+  if letter_count[key] == nil
+    letter_count[key] = 0
+  end
+  letter_count[key] += 1
+  index1 += 1
+end
+
+p letter_count
+
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 
