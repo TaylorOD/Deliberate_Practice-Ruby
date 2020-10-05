@@ -62,6 +62,15 @@ p items_info_array
 #  5. Convert a hash into an array of hashes using the keys from each hash as the :id key in each of the array's hashes.
 #     For example, {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}} becomes [{id: 321, name: "Alice", age: 31}, {id: 322, name: "Maria", age: 27}].
 
+peoples_info = { 321 => { name: "Alice", age: 31 }, 322 => { name: "Maria", age: 27 } }
+id_peoples_info = []
+peoples_info.each do |id, person_info|
+  person_info[:id] = id
+  id_peoples_info << person_info
+end
+
+p id_peoples_info
+
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
