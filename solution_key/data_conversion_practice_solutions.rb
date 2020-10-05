@@ -74,6 +74,21 @@ p id_peoples_info
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
+strings = ["do", "or", "do", "not"]
+word_count = {}
+index1 = 0
+
+while index1 < strings.length
+  key = strings[index1]
+  if word_count[key] == nil
+    word_count[key] = 0
+  end
+  word_count[key] += 1
+  index1 += 1
+end
+
+p word_count
+
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
