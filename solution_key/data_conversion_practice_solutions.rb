@@ -92,6 +92,16 @@ p word_count
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
+hash = { "a" => 1, "b" => 2, "c" => 3, "d" => 4 }
+result = []
+
+hash.each do |letter, number|
+  result << letter
+  result << number
+end
+
+p result
+
 #  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 #     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
 
