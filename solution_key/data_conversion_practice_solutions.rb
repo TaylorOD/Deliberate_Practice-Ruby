@@ -127,5 +127,23 @@ p combo_hash
 #  9. Convert an array of hashes into a hash of arrays, using the author as keys and the titles as values.
 #     For example, [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}] becomes {"Jeff Smith" => ["Bone", "RASL"], "George Orwell" => ["1984"]}.
 
+authors_and_titles = [{ author: "Jeff Smith", title: "Bone" }, { author: "George Orwell", title: "1984" }, { author: "Jeff Smith", title: "RASL" }]
+authors_multiple_titles = {}
+index1 = 0
+
+while index1 < authors_and_titles.length
+  book = authors_and_titles[index1]
+  author = book[:author]
+  title = book[:title]
+
+  if authors_multiple_titles[author] == nil
+    authors_multiple_titles[author] = []
+  end
+  authors_multiple_titles[author] << title
+
+  index1 += 1
+end
+p authors_multiple_titles
+
 # 10. Given a hash, create a new hash that has the keys and values switched.
 #     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
