@@ -105,6 +105,25 @@ p result
 #  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 #     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
 
+items_hash = { "chair" => 75, "book" => 15 }
+items_array = [{ name: "chair", color: "red", weight: 10 }, { name: "book", color: "black", weight: 1 }]
+combo_hash = {}
+index1 = 0
+
+while index1 < items_hash.length
+  item = items_array[index1]
+  name = item[:name]
+  color = item[:color]
+  weight = item[:weight]
+  price = items_hash[name]
+
+  combo_hash[name] = { price: price, color: color, weight: weight }
+
+  index1 += 1
+end
+
+p combo_hash
+
 #  9. Convert an array of hashes into a hash of arrays, using the author as keys and the titles as values.
 #     For example, [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}] becomes {"Jeff Smith" => ["Bone", "RASL"], "George Orwell" => ["1984"]}.
 
